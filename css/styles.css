@@ -1,0 +1,4 @@
+.jobList ul{
+    display: flex;
+    list-style-type: none;
+}
