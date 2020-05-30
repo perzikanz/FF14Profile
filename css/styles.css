@@ -1,4 +1,5 @@
-.jobList ul{
+.jobList {
     display: flex;
     list-style-type: none;
+    text-align: center;
 }
