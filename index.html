@@ -8,6 +8,14 @@
     </head>
 
     <body>
+        <input id="name" name="name" type="text">
+        <button id="button" onClick="push()">押してね</button>
+        <script>
+            const name = document.getElementById('name')
+            function push(){
+                console.log(name.value)
+            }
+        </script>
         <p id="charaName">キャラクターの名前</p>
         <img id="charaImg" alt="キャラクターの全身図">
         <p>ジョブレベル</p>
