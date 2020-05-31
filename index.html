@@ -8,146 +8,142 @@
     </head>
 
     <body>
-        <input id="name" name="name" type="text">
+        <input id="lodestoneId" name="name" type="text">
         <button id="button" onClick="push()">押してね</button>
-        <script>
-            const name = document.getElementById('name')
-            function push(){
-                console.log(name.value)
-            }
-        </script>
-        
+
         <p id="charaName">キャラクターの名前</p>
         <img id="charaImg" alt="キャラクターの全身図">
         <p>ジョブレベル</p>
         <div class="job">
             <ul class="jobList"><!--TH-->
-                <il class="jobItem"><!-- ナイト/剣術士 -->
+                <il id="pld" class="jobItem"><!-- ナイト/剣術士 -->
                     <img class="jobItem__Image" src="JobIcons/Paladin.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 戦士/斧術士 -->
+                <il id="war" class="jobItem"><!-- 戦士/斧術士 -->
                     <img class="jobItem__Image" src="JobIcons/Warrior.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 暗黒騎士 -->
+                <il id="drk" class="jobItem"><!-- 暗黒騎士 -->
                     <img class="jobItem__Image" src="JobIcons/DarkKnight.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- ガンブレイカー -->
+                <il id="gnb" class="jobItem"><!-- ガンブレイカー -->
                     <img class="jobItem__Image" src="JobIcons/Gunbreaker.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 白魔道士/幻術士 -->
+                <il id="whm" class="jobItem"><!-- 白魔道士/幻術士 -->
                     <img class="jobItem__Image" src="JobIcons/WhiteMage.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 学者 -->
+                <il id="sch" class="jobItem"><!-- 学者 -->
                     <img class="jobItem__Image" src="JobIcons/Scholar.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 占星術師 -->
+                <il id="ast" class="jobItem"><!-- 占星術師 -->
                     <img class="jobItem__Image" src="JobIcons/Astrologian.png">
                     <div class="jobItem__Level">-</div>
                 </il>
             </ul>
             <ul class="jobList"><!--DPS-->
-                <il class="jobItem"><!-- モンク/格闘士 -->
+                <il id="mnk" class="jobItem"><!-- モンク/格闘士 -->
                     <img class="jobItem__Image" src="JobIcons/Monk.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 竜騎士/槍術士 -->
+                <il id="drg" class="jobItem"><!-- 竜騎士/槍術士 -->
                     <img class="jobItem__Image" src="JobIcons/Dragoon.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 忍者/双剣士 -->
+                <il id="nin" class="jobItem"><!-- 忍者/双剣士 -->
                     <img class="jobItem__Image" src="JobIcons/Ninja.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 侍 -->
+                <il id="sam" class="jobItem"><!-- 侍 -->
                     <img class="jobItem__Image" src="JobIcons/Samurai.png">
                     <div class="jobItem__Level">-</div>
                     </il>
-                <il class="jobItem"><!-- 吟遊詩人/弓術士 -->
+                <il id="brd" class="jobItem"><!-- 吟遊詩人/弓術士 -->
                     <img class="jobItem__Image" src="JobIcons/Bard.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 機工士 -->
+                <il id="mcn" class="jobItem"><!-- 機工士 -->
                     <img class="jobItem__Image" src="JobIcons/Machinist.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 踊り子 -->
+                <il id="dnc" class="jobItem"><!-- 踊り子 -->
                     <img class="jobItem__Image" src="JobIcons/Dancer.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 黒魔道士/呪術士 -->
+                <il id="blm" class="jobItem"><!-- 黒魔道士/呪術士 -->
                     <img class="jobItem__Image" src="JobIcons/BlackMage.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 召喚士/巴術士 -->
+                <il id="smn" class="jobItem"><!-- 召喚士/巴術士 -->
                     <img class="jobItem__Image" src="JobIcons/Summoner.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 赤魔道士 -->
+                <il id="rdm" class="jobItem"><!-- 赤魔道士 -->
                     <img class="jobItem__Image" src="JobIcons/RedMage.png">
                     <div class="jobItem__Level">-</div>
                 </il>
-                <il class="jobItem"><!-- 青魔道士 -->
+                <il id="blu" class="jobItem"><!-- 青魔道士 -->
                     <img class="jobItem__Image" src="JobIcons/BlueMage.png">
                     <div class="jobItem__Level">-</div>
                 </il>
             </ul>
             <ul class="jobList"><!--ギャザクラ-->
-                <li class="jobItem"><!-- 木工師 -->
+                <li id="crp" class="jobItem"><!-- 木工師 -->
                     <img class="jobItem__Image" src="JobIcons/Carpenter.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 鍛冶師 -->
+                <li id="bsm" class="jobItem"><!-- 鍛冶師 -->
                     <img class="jobItem__Image" src="JobIcons/Blacksmith.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 甲冑師 -->
+                <li id="arm" class="jobItem"><!-- 甲冑師 -->
                     <img class="jobItem__Image" src="JobIcons/Armorer.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 彫金師 -->
+                <li id="gsm" class="jobItem"><!-- 彫金師 -->
                     <img class="jobItem__Image" src="JobIcons/Goldsmith.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 革細工師 -->
+                <li id="ltw" class="jobItem"><!-- 革細工師 -->
                     <img class="jobItem__Image" src="JobIcons/Leatherworker.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 裁縫師 -->
+                <li id="wvr" class="jobItem"><!-- 裁縫師 -->
                     <img class="jobItem__Image" src="JobIcons/Weaver.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 錬金術師 -->
+                <li id="alc" class="jobItem"><!-- 錬金術師 -->
                     <img class="jobItem__Image" src="JobIcons/Alchemist.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 調理師 -->
+                <li id="cul" class="jobItem"><!-- 調理師 -->
                     <img class="jobItem__Image" src="JobIcons/Culinarian.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 採掘師 -->
+                <li id="min" class="jobItem"><!-- 採掘師 -->
                     <img class="jobItem__Image" src="JobIcons/Miner.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 園芸師 -->
+                <li id="btn" class="jobItem"><!-- 園芸師 -->
                     <img class="jobItem__Image" src="JobIcons/Botanist.png">
                     <div class="jobItem__Level">-</div>
                 </li>
-                <li class="jobItem"><!-- 漁師 -->
+                <li id="fsh" class="jobItem"><!-- 漁師 -->
                     <img class="jobItem__Image" src="JobIcons/Fisher.png">
                     <div class="jobItem__Level">-</div>
                 </li>
             </ul>
         </div>
+
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
 
 <!-- プレイスタイルを重視。
     たとえば戦闘コンテンツメインでも絶にいくようなバリバリの戦闘民もいれば、
-    ルレしか行きません～みたいなライトちゃんもいる。
+    ルレがメインで零式も後発組です～みたいなライトちゃんもいる。
     もし一緒に遊ぶなら、プレイスタイルが合う人がいいので。 -->
