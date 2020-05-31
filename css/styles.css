@@ -1,3 +1,7 @@
+.profileImg {
+    width: 300px;
+}
+
 .jobList {
     display: flex;
     list-style-type: none;

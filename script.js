@@ -32,8 +32,109 @@ const btn = document.getElementById('btn');
 const fsh = document.getElementById('fsh');
 
 
-function push(){
-    fetch("https://xivapi.com/character/22728375").then(response => response.json()).then(jsonData => console.log(jsonData.Character.Name));
-}
+function reflecteCharacterData(jsonData) {
+    // 各要素にデータを反映
+    // console.log(jsonData.Character.Name);
+    charaName.innerText = jsonData.Character.Name;
+    charaImg.src = jsonData.Character.Portrait;
+    jsonData.Character.ClassJobs.map((jobData, i) => {
+        switch (i) {
+            case 0:
+                pld.lastElementChild.innerText = jobData.Level;
+                break;
+            case 1:
+                war.lastElementChild.innerText = jobData.Level;
+                break;
+            case 2:
+                drk.lastElementChild.innerText = jobData.Level;
+                break;
+            case 3:
+                gnb.lastElementChild.innerText = jobData.Level;
+                break;
+            case 4:
+                whm.lastElementChild.innerText = jobData.Level;
+                break;
+            case 5:
+                sch.lastElementChild.innerText = jobData.Level;
+                break;
+            case 6:
+                ast.lastElementChild.innerText = jobData.Level;
+                break;
+            case 7:
+                mnk.lastElementChild.innerText = jobData.Level;
+                break;
+            case 8:
+                drg.lastElementChild.innerText = jobData.Level;
+                break;
+            case 9:
+                nin.lastElementChild.innerText = jobData.Level;
+                break;
+            case 10:
+                sam.lastElementChild.innerText = jobData.Level;
+                break;
+            case 11:
+                brd.lastElementChild.innerText = jobData.Level;
+                break;
+            case 12:
+                mcn.lastElementChild.innerText = jobData.Level;
+                break;
+            case 13:
+                dnc.lastElementChild.innerText = jobData.Level;
+                break;
+            case 14:
+                blm.lastElementChild.innerText = jobData.Level;
+                break;
+            case 15:
+                smn.lastElementChild.innerText = jobData.Level;
+                break;
+            case 16:
+                rdm.lastElementChild.innerText = jobData.Level;
+                break;
+            case 17:
+                blu.lastElementChild.innerText = jobData.Level;
+                break;
+            case 18:
+                crp.lastElementChild.innerText = jobData.Level;
+                break;
+            case 19:
+                bsm.lastElementChild.innerText = jobData.Level;
+                break;
+            case 20:
+                arm.lastElementChild.innerText = jobData.Level;
+                break;
+            case 21:
+                gsm.lastElementChild.innerText = jobData.Level;
+                break;
+            case 22:
+                ltw.lastElementChild.innerText = jobData.Level;
+                break;
+            case 23:
+                wvr.lastElementChild.innerText = jobData.Level;
+                break;
+            case 24:
+                alc.lastElementChild.innerText = jobData.Level;
+                break;
+            case 25:
+                cul.lastElementChild.innerText = jobData.Level;
+                break;
+            case 26:
+                min.lastElementChild.innerText = jobData.Level;
+                break;
+            case 27:
+                btn.lastElementChild.innerText = jobData.Level;
+                break;
+            case 28:
+                fsh.lastElementChild.innerText = jobData.Level;
+                break;
+            default:
+                break;
+        }
+    });
 
-// war.lastElementChild.innerText = 50
+  };
+  
+  function push(){
+      const inputText = document.getElementById('lodestoneId').value;
+      fetch(`https://xivapi.com/character/${inputText}?data=CJ`).then(response => response.json()).then(jsonData => reflecteCharacterData(jsonData));
+  };
+
